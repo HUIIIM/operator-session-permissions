@@ -1,0 +1,26 @@
+# Example named access policy (fictional values only).
+# Field set follows section 1.1 of the design in references/design-v0.2.md.
+# Rule evaluation order (section 1.2): any disable match wins; otherwise any
+# enable match allows; otherwise denied. A policy whose enable lists are all
+# empty cannot be activated (error code policy_empty_scope).
+policy_id: "sc_example0001"
+name: "example-mail-readonly"
+version: 1
+owner: "example-team"
+state: "draft" # draft / pending_review / active / archived; only active can be referenced by new sessions
+rules:
+  toolkits:
+    enable:
+      - "example_mail"
+    disable: []
+  tools:
+    enable:
+      - "example_mail.search"
+      - "example_mail.read"
+    disable:
+      - "example_mail.send" # cut-out: disable wins over the toolkit-level enable above
+  tags:
+    enable:
+      - "read-only"
+    disable:
+      - "destructive"
