@@ -11,8 +11,7 @@ operator-session-permissions/
 |-- references/
 |   |-- design-v0.2.md                  # canonical design, verbatim (Chinese)
 |   |-- error-codes.md                  # error-code registry (design section 6.3 extract)
-|   |-- acceptance-tests.md             # 22 acceptance tests (design section 7 extract)
-|   `-- implementation-preconditions.md # 17 open implementation-review items (summary)
+|   `-- acceptance-tests.md             # 22 acceptance tests (design section 7 extract)
 |-- templates/
 |   |-- policy.example.yaml             # fictional named-policy example
 |   `-- session-create.example.json     # fictional session-create payload example
@@ -30,7 +29,7 @@ The canonical design is design v0.2, finalized on 2026-10-16 after passing a dua
 
 ## Scope limit
 
-This package guides design and audit only. Until the implementation preconditions in `references/implementation-preconditions.md` are closed in implementation review and both review gates have issued written closure records, any implementation of this design runs only in development environments with no real credentials, no production data, and no real user accounts; publication of this package does not constitute a production-access license for any hosted authorization layer, which requires separate approval.
+This package guides design and audit only. Until the implementation preconditions (an internal review record, not published with this package) are closed in implementation review and both review gates have issued written closure records, any implementation of this design runs only in development environments with no real credentials, no production data, and no real user accounts; publication of this package does not constitute a production-access license for any hosted authorization layer, which requires separate approval.
 
 ## License
 

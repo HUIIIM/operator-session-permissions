@@ -22,7 +22,7 @@ Canonical source: `references/design-v0.2.md` (design v0.2, finalized 2026-10-16
 
 - Multi-tenant billing, cross-organization policy inheritance, or tool-marketplace/registry design (explicit non-goals of the design).
 - The OAuth provider's hosted implementation itself; this package defines only the operator-side session-permission and callback-verification contract.
-- Any work that would connect real credentials, production data, or real user accounts before the implementation preconditions in `references/implementation-preconditions.md` are closed (see "Scope limit" below).
+- Any work that would connect real credentials, production data, or real user accounts before the implementation preconditions (internal review record, not published with this package) are closed (see "Scope limit" below).
 
 ## Mental model
 
@@ -117,7 +117,7 @@ Before starting, assemble: (1) the artifact under work - a policy draft, a sessi
 
 ## Scope limit (efficacy boundary - read before implementing)
 
-This package guides **design and audit only**. The design it packages passed a dual-gate (compliance + security) review, but two things remain open until implementation review closes them: the 17 implementation-precondition items in `references/implementation-preconditions.md`, and the graded-activation-review condition (compliance Condition 1). Until all of them are closed **and** both gates have issued written closure records:
+This package guides **design and audit only**. The design it packages passed a dual-gate (compliance + security) review, but two things remain open until implementation review closes them: the 17 implementation-precondition items (internal review record, not published with this package), and the graded-activation-review condition (compliance Condition 1). Until all of them are closed **and** both gates have issued written closure records:
 
 - any implementation of this design runs only in development environments with no real credentials, no production data, and no real user accounts;
 - this package's publication does **not** constitute a production-access license for any hosted authorization layer, which requires its own separate approval.
@@ -127,6 +127,6 @@ This package guides **design and audit only**. The design it packages passed a d
 - `references/design-v0.2.md` - the canonical design, verbatim (Chinese).
 - `references/error-codes.md` - the error-code registry (design section 6.3, verbatim extract).
 - `references/acceptance-tests.md` - the 22 acceptance tests (design section 7, verbatim extract).
-- `references/implementation-preconditions.md` - the 17 open implementation-review items plus the Condition 1 closure standard (summary register).
+- Implementation preconditions - the 17 open implementation-review items plus the Condition 1 closure standard; held as an internal review record, not published with this package.
 - `templates/policy.example.yaml` / `templates/session-create.example.json` - fictional example payloads.
 - `evals/smoke.md` - three self-contained smoke evaluations.
